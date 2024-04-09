@@ -24,6 +24,7 @@ import {
   $createParagraphNode,
   $isElementNode,
   $isLineBreakNode,
+  $isTextNode,
   ElementNode,
 } from 'lexical';
 
@@ -330,6 +331,9 @@ export function convertTableCellNodeElement(
           lexicalNode.getTextContent() === '\n'
         ) {
           return null;
+        }
+        if ($isTextNode(lexicalNode)) {
+          lexicalNode.setStyle(domNode_.style.cssText);
         }
         paragraphNode.append(lexicalNode);
         return paragraphNode;
