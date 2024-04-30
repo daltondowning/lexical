@@ -58,7 +58,7 @@ function Editor() {
           return provider;
         }}
         // Optional initial editor state in case collaborative Y.Doc won't
-        // have any existing data on server. Then it'll user this value to populate editor. 
+        // have any existing data on server. Then it'll user this value to populate editor.
         // It accepts same type of values as LexicalComposer editorState
         // prop (json string, state object, or a function)
         initialEditorState={initialEditorState}
@@ -69,12 +69,14 @@ function Editor() {
 }
 ```
 
+## See it in action
+
+<iframe width="100%" height="500" src="https://githubbox.com/facebook/lexical/tree/fix%2Fcollab_example/examples/react-rich-collab?file=%2Fsrc%2FEditor.tsx&editorsize=10" sandbox="allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-presentation allow-same-origin allow-scripts"></iframe>
+
+<iframe width="100%" height="500" src="https://githubbox.com/facebook/lexical/tree/fix%2Fcollab_example/examples/react-rich-collab?file=%2Fsrc%2FEditor.tsx&runonclick=1" sandbox="allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-presentation allow-same-origin allow-scripts"></iframe>
+
 ## Yjs providers
 
 Setting up the communication between clients, managing awareness information, and storing shared data for offline usage is quite a hassle. Providers manage all that for you and are the perfect starting point for your collaborative app.
 
-- [y-webrtc](https://github.com/yjs/y-webrtc)
-- [y-websocket](https://github.com/yjs/y-websocket)
-- [y-indexeddb](https://github.com/yjs/y-indexeddb)
-- [@liveblocks/yjs](https://liveblocks.io/docs/api-reference/liveblocks-yjs)
-
+See [Yjs Website](https://docs.yjs.dev/ecosystem/connection-provider) for the list of the officially endorsed providers. Although it's not an exaustive one.
